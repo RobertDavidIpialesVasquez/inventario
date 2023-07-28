@@ -91,10 +91,10 @@ public class Inicio extends javax.swing.JFrame {
         jLabel6.setText("CENTRO DE INVENTARIOS DE CELULARES");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 490, 40));
 
-        pssw.setBackground(new java.awt.Color(0, 51, 51));
+        pssw.setBackground(new java.awt.Color(255, 255, 0));
         getContentPane().add(pssw, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 270, -1));
 
-        txtusuario.setBackground(new java.awt.Color(0, 51, 51));
+        txtusuario.setBackground(new java.awt.Color(255, 255, 0));
         getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 280, -1));
 
         jLabel7.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
