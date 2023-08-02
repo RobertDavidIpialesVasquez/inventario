@@ -49,7 +49,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         txt_contraseña = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txt_apellido1 = new javax.swing.JTextField();
+        txt_apellido = new javax.swing.JTextField();
         txt_movil = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -66,7 +66,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(153, 153, 0));
         jLabel2.setFont(new java.awt.Font("Perpetua Titling MT", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 0));
-        jLabel2.setText("AñADIR USUSARIO");
+        jLabel2.setText("AñADIR ADMINSTRADOR");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, 40));
 
         Usuario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
@@ -143,8 +143,8 @@ public class CrearUsuario extends javax.swing.JFrame {
         jLabel5.setText("Direccion Domicilio:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
-        txt_apellido1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 0)));
-        getContentPane().add(txt_apellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 310, 30));
+        txt_apellido.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 0)));
+        getContentPane().add(txt_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 310, 30));
 
         txt_movil.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 0)));
         getContentPane().add(txt_movil, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 310, 30));
@@ -175,7 +175,7 @@ public class CrearUsuario extends javax.swing.JFrame {
 
         try {
             String nombre = txt_nombre.getText();
-            String apellido = txt_apellido1.getText();
+            String apellido = txt_apellido.getText();
             String movil = txt_movil.getText();
             String direccion = txt_direccion.getText();
             String usuario = txt_usuario.getText();
@@ -195,8 +195,11 @@ public class CrearUsuario extends javax.swing.JFrame {
 
                 Limpiar1();
             } else {
-
-                String query = "INSERT INTO inicio (Nombre, Apellido, TelefonoMovil, DireccionDomicilio, Usuario, Contraseña) VALUES (?, ?, ?, ?, ?, ?)";
+                   
+                
+                
+                
+                String query = "call conexion.insertar_usuario(?,?,?,?,?,?);";
                 PreparedStatement ps = Conexionn.conectar().prepareStatement(query);
                 ps.setString(1, nombre);
                 ps.setString(2, apellido);
@@ -274,7 +277,7 @@ public class CrearUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txt_apellido1;
+    private javax.swing.JTextField txt_apellido;
     private javax.swing.JTextField txt_contraseña;
     private javax.swing.JTextField txt_direccion;
     private javax.swing.JTextField txt_movil;
@@ -287,6 +290,9 @@ public class CrearUsuario extends javax.swing.JFrame {
         txt_direccion.setText("");
         txt_usuario.setText("");
         txt_contraseña.setText("");
+        txt_direccion.setText("");
+        txt_movil.setText("");
+        txt_apellido.setText("");
 
     }
 
