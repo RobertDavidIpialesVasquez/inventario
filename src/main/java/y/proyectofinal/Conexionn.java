@@ -16,8 +16,12 @@ public class Conexionn {
     //conexion local
     public static Connection conectar() {
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/conexion", "root", "root");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3305/conexion", "root", "");
+            
+           // Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/conexion", "root", "root");
+            System.out.println("CONECTADO");
             return cn;
+            
         } catch (SQLException e) {
             System.out.println("Error en la conexion local " + e);
         }
