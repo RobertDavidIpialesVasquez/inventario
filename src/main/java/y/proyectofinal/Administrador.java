@@ -45,7 +45,6 @@ public class Administrador extends javax.swing.JFrame {
         bttcerrarsesion = new javax.swing.JButton();
         bttkardex = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -89,6 +88,7 @@ public class Administrador extends javax.swing.JFrame {
 
         bttañadirusuari.setBackground(new java.awt.Color(204, 204, 0));
         bttañadirusuari.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
+        bttañadirusuari.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\admin_user_icon_217189.png")); // NOI18N
         bttañadirusuari.setText("AÑADIR NUEVO USUARIO");
         bttañadirusuari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bttañadirusuari.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +104,7 @@ public class Administrador extends javax.swing.JFrame {
 
         bttnuevasmarcas.setBackground(new java.awt.Color(204, 204, 0));
         bttnuevasmarcas.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
+        bttnuevasmarcas.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\cargo-truck-with-letter-c-on-black-square-background_icon-icons.com_70776.png")); // NOI18N
         bttnuevasmarcas.setText("AGREGAR NUEVo Modelo");
         bttnuevasmarcas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bttnuevasmarcas.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +115,8 @@ public class Administrador extends javax.swing.JFrame {
 
         bttnuevomodelo.setBackground(new java.awt.Color(204, 204, 0));
         bttnuevomodelo.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
-        bttnuevomodelo.setText("Agregar NUEVO marca");
+        bttnuevomodelo.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\categories_expand_icon_216184.png")); // NOI18N
+        bttnuevomodelo.setText("Agregar NUEVa marca");
         bttnuevomodelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bttnuevomodelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,6 +126,7 @@ public class Administrador extends javax.swing.JFrame {
 
         bttcerrarsesion.setBackground(new java.awt.Color(204, 204, 0));
         bttcerrarsesion.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        bttcerrarsesion.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\logoutorsendsquarewithrightarrowinterfacesymbol_87809.png")); // NOI18N
         bttcerrarsesion.setText("Cerrar Sesion ");
         bttcerrarsesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bttcerrarsesion.addActionListener(new java.awt.event.ActionListener() {
@@ -134,6 +137,7 @@ public class Administrador extends javax.swing.JFrame {
 
         bttkardex.setBackground(new java.awt.Color(204, 204, 0));
         bttkardex.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
+        bttkardex.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\stockkkkkkk (2).png")); // NOI18N
         bttkardex.setText("KARDEX ENTRADA");
         bttkardex.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bttkardex.addActionListener(new java.awt.event.ActionListener() {
@@ -144,36 +148,27 @@ public class Administrador extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(204, 204, 0));
         jButton1.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\stockkkkkkk (2).png")); // NOI18N
         jButton1.setText("KARDEX SALIDA");
-
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(lblmenu)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bttcerrarsesion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bttnuevasmarcas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bttnuevomodelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bttañadirusuari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bttkardex, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(94, 94, 94)
-                                .addComponent(lblmenu))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(105, 105, 105)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(bttkardex, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bttañadirusuari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bttnuevasmarcas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -183,17 +178,15 @@ public class Administrador extends javax.swing.JFrame {
                 .addComponent(lblmenu)
                 .addGap(18, 18, 18)
                 .addComponent(bttkardex)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addGap(28, 28, 28)
+                .addGap(16, 16, 16)
+                .addComponent(bttnuevomodelo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bttnuevasmarcas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(bttañadirusuari)
                 .addGap(18, 18, 18)
-                .addComponent(bttnuevasmarcas)
-                .addGap(18, 18, 18)
-                .addComponent(bttnuevomodelo)
-                .addGap(37, 37, 37)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addComponent(bttcerrarsesion)
                 .addGap(14, 14, 14))
         );
@@ -224,7 +217,11 @@ public class Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_bttcerrarsesionActionPerformed
 
     private void bttnuevomodeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnuevomodeloActionPerformed
-        // TODO add your handling code here:
+        Agregar_Marca ag= new Agregar_Marca();
+        ag.setVisible(rootPaneCheckingEnabled);
+        this.dispose();
+        
+        
     }//GEN-LAST:event_bttnuevomodeloActionPerformed
 
     private void bttañadirusuariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttañadirusuariActionPerformed
@@ -256,12 +253,6 @@ public class Administrador extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_bttnuevasmarcasActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Stock s=new Stock();
-        s.show();
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,7 +304,6 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JButton bttnuevasmarcas;
     private javax.swing.JButton bttnuevomodelo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

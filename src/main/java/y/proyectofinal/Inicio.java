@@ -118,7 +118,7 @@ public class Inicio extends javax.swing.JFrame {
         BTTSTOCK.setBackground(new java.awt.Color(153, 153, 0));
         BTTSTOCK.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
         BTTSTOCK.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\stock.png")); // NOI18N
-        BTTSTOCK.setText("VOSUALIZAR STOCK");
+        BTTSTOCK.setText("VISUALIZAR STOCK");
         BTTSTOCK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTTSTOCK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
