@@ -58,7 +58,6 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
         cbx_Almacenamiento = new javax.swing.JComboBox<>();
         lbl_fecha = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
@@ -80,6 +79,7 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
         jLabel3.setText("Color:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
+        tb_Agregar.setBackground(new java.awt.Color(255, 255, 153));
         tb_Agregar.setBorder(new javax.swing.border.MatteBorder(null));
         tb_Agregar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,13 +97,15 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 950, 215));
 
+        txt_modelocelular.setBackground(new java.awt.Color(0, 51, 102));
         txt_modelocelular.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 0)));
         getContentPane().add(txt_modelocelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 250, 30));
 
+        txt_colorcelular.setBackground(new java.awt.Color(0, 51, 102));
         txt_colorcelular.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 0)));
         getContentPane().add(txt_colorcelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 250, 30));
 
-        btt_agregarcelular.setBackground(new java.awt.Color(255, 255, 0));
+        btt_agregarcelular.setBackground(new java.awt.Color(204, 204, 0));
         btt_agregarcelular.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
         btt_agregarcelular.setText("Agregar");
         btt_agregarcelular.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -118,15 +120,17 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(204, 204, 0));
         jLabel8.setText("FECHA DE INGRESO:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 200, 20));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 200, 20));
 
         jLabel10.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(204, 204, 0));
         jLabel10.setText("Almacenamiento:");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, -1));
 
+        cbx_Almacenamiento.setBackground(new java.awt.Color(0, 51, 102));
         cbx_Almacenamiento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbx_Almacenamiento.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 0)));
+        cbx_Almacenamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cbx_Almacenamiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_AlmacenamientoActionPerformed(evt);
@@ -138,20 +142,17 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
         lbl_fecha.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         lbl_fecha.setForeground(new java.awt.Color(255, 255, 255));
         lbl_fecha.setText("DD/MM/YYYY");
-        getContentPane().add(lbl_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, 230, 20));
+        getContentPane().add(lbl_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 230, 20));
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 0));
+        jButton3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         jButton3.setText("ELIMINAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 460, -1, -1));
-
-        jButton1.setBackground(new java.awt.Color(204, 204, 0));
-        jButton1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
-        jButton1.setText("modificar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, -1, 30));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 450, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(204, 204, 0));
         jButton2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
@@ -215,33 +216,32 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
     }//GEN-LAST:event_cbx_AlmacenamientoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        int filaSeleccionada = tb_Agregar.getSelectedRow();
+       int filaSeleccionada = tb_Agregar.getSelectedRow();
 
-        if (filaSeleccionada == -1) {
-            JOptionPane.showMessageDialog(null, "Por favor, selecciona un registro para eliminar");
-        } else {
-            try {
-                DefaultTableModel model = (DefaultTableModel) tb_Agregar.getModel();
-                int idUsuarioAEliminar = (int) model.getValueAt(filaSeleccionada, 0);
+    if (filaSeleccionada == -1) {
+        JOptionPane.showMessageDialog(null, "Por favor, selecciona un registro para eliminar");
+    } else {
+        try {
+            DefaultTableModel model = (DefaultTableModel) tb_Agregar.getModel();
+            int idUsuarioAEliminar = (int) model.getValueAt(filaSeleccionada, 0);
 
-                String query = "DELETE FROM modelo_Celular WHERE ID_Celular = ?";
-                PreparedStatement ps = con.prepareStatement(query);
-                ps.setInt(1, idUsuarioAEliminar);
+            String query = "DELETE FROM modelo_celular WHERE ID_Celular = ?";
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(1, idUsuarioAEliminar);
 
-                int rowsDeleted = ps.executeUpdate();
+            int rowsDeleted = ps.executeUpdate();
 
-                if (rowsDeleted > 0) {
-                    JOptionPane.showMessageDialog(null, "Registro eliminado correctamente");
-                    // Actualizar la tabla después de eliminar el registro
-                    btt_agregarcelularActionPerformed(evt);
-                } else {
-                    JOptionPane.showMessageDialog(null, "No se encontró el registro en la base de datos");
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(AgregarNuevasMarcas.class.getName()).log(Level.SEVERE, null, ex);
+            if (rowsDeleted > 0) {
+                JOptionPane.showMessageDialog(null, "Registro eliminado correctamente");
+                // Actualizar la tabla después de eliminar el registro
+                btt_agregarcelularActionPerformed(evt);
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el registro en la base de datos");
             }
-
+        } catch (SQLException ex) {
+            Logger.getLogger(AgregarNuevasMarcas.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
 
 
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -284,7 +284,6 @@ public class AgregarNuevasMarcas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btt_agregarcelular;
     private javax.swing.JComboBox<String> cbx_Almacenamiento;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;

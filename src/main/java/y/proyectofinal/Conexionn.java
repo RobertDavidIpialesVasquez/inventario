@@ -23,5 +23,9 @@ public class Conexionn {
         }
         return null;
     }
-    
+
+//    ResultSet EjecutaSQL(String sql2) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
+//    
 }

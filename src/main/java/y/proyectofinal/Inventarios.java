@@ -4,15 +4,24 @@
  */
 package y.proyectofinal;
 
+import java.io.FileOutputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.text.Document;
+
 /**
  *
  * @author User
  */
 public class Inventarios extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Inventarios
-     */
+    Conexionn cn = new Conexionn();
+    Connection con = cn.conectar();
+
     public Inventarios() {
         initComponents();
     }
@@ -28,30 +37,47 @@ public class Inventarios extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaClientes = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        txt_Ventacliente = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
         jLabel1.setText("INVENTARIOS");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 16, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, -1));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaClientes.setBackground(new java.awt.Color(255, 255, 153));
+        tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "MODELO", "ALMACENAMIENTO", "COSTO", "CANTIDAD", "VALOR UNITARIO", "FECHA GENERADA"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tablaClientes);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 760, 510));
+
+        jLabel3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 204, 0));
+        jLabel3.setText("ULTIMO INVENTARIO INGRESADO");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 0));
+        jLabel4.setText("BUSCAR UNVENTARIO (POR MARCAS):");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         jButton1.setText("ATRAS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -59,20 +85,64 @@ public class Inventarios extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 610, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, -1));
+        getContentPane().add(txt_Ventacliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 280, 40));
+
+        jButton2.setBackground(new java.awt.Color(153, 153, 0));
+        jButton2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\stockpequeño.png")); // NOI18N
+        jButton2.setText("CONSULTAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, 170, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\SOLOFONDO.png")); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 710));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Inicio i= new Inicio();
+        Inicio i = new Inicio();
         i.setVisible(rootPaneCheckingEnabled);
         this.dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        String marcaBuscar = txt_Ventacliente.getText().trim();
+        Connection cn = Conexionn.conectar();
+        String sql = "select marca, proveedor, modelo, cantidad ,valor_unitario,fecha from kardex where marca = '" + marcaBuscar + "'";
+        Statement st;
+        try {
+            st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            DefaultTableModel model = (DefaultTableModel) tablaClientes.getModel();
+            model.setRowCount(0); // Limpia la tabla antes de agregar nuevos datos
+
+            while (rs.next()) {
+                String marca = rs.getString("marca");
+                String proveedor = rs.getString("proveedor");
+                String modelo = rs.getString("modelo");
+                String cantidad = rs.getString("cantidad");
+                String valor_unitario = rs.getString("valor_unitario");
+                String fecha = rs.getString("fecha");
+
+                Object[] fila = {marca, proveedor, modelo, cantidad,valor_unitario, fecha};
+                model.addRow(fila);
+            }
+
+            txt_Ventacliente.setText("");
+            cn.close();
+        } catch (SQLException e) {
+            System.out.println("¡Error al buscar registros de la marca en el kardex!, " + e);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,9 +181,13 @@ public class Inventarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable tablaClientes;
+    private javax.swing.JTextField txt_Ventacliente;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import static y.proyectofinal.AgregarNuevasMarcas.fechaActual;
@@ -90,10 +92,12 @@ public class Krex extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 0));
-        jLabel1.setText("KARDEX");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 0, 194, 41));
+        jLabel1.setText("KARDEX REGISTRO DE ENTRADAS");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 340, 41));
 
+        tb_kardex.setBackground(new java.awt.Color(255, 255, 153));
         tb_kardex.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -133,6 +137,11 @@ public class Krex extends javax.swing.JFrame {
         cbx_marca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbx_marca.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         cbx_marca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cbx_marca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbx_marcaActionPerformed(evt);
+            }
+        });
         getContentPane().add(cbx_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 240, -1));
 
         jLabel8.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
@@ -332,9 +341,9 @@ public class Krex extends javax.swing.JFrame {
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Inicio i = new Inicio();
-        i.setVisible(rootPaneCheckingEnabled);
-        this.dispose();
+       Administrador a= new Administrador();
+       a.setVisible(rootPaneCheckingEnabled);
+       this.dispose();
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -414,6 +423,25 @@ public class Krex extends javax.swing.JFrame {
     lbl_totalexistecia.setText(lbl_valortotalentrada.getText());
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cbx_marcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_marcaActionPerformed
+//        // TODO add your handling code here:
+//        String sql2 = "SELECT * FROM catalogo WHERE Cat_Nombre = '"+ cbx_marca.getSelectedItem() + "'";
+//        Conexionn c1 = new Conexionn();
+//        ResultSet res = c1.EjecutaSQL(sql2);
+//        try {
+//            while(res.next()){
+//                String sql1 = "SELECT * FROM catalogo WHERE Cat_Padre = "+ res.getInt("Cat_Id");
+//                res = c1.EjecutaSQL(sql1);
+//                cbx_modelo.removeAllItems();
+//                while(res.next()){
+//                    cbx_modelo.addItem(res.getString("Cat_Nombre"));
+//                }
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Krex.class.getName()).log(Level.SEVERE, null, ex);
+//        } 
+    }//GEN-LAST:event_cbx_marcaActionPerformed
 
     /**
      * @param args the command line arguments
