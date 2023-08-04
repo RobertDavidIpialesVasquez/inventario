@@ -116,7 +116,7 @@ public class Administrador extends javax.swing.JFrame {
         bttnuevomodelo.setBackground(new java.awt.Color(204, 204, 0));
         bttnuevomodelo.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
         bttnuevomodelo.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Pictures\\categories_expand_icon_216184.png")); // NOI18N
-        bttnuevomodelo.setText("Agregar NUEVO marca");
+        bttnuevomodelo.setText("Agregar NUEVa marca");
         bttnuevomodelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bttnuevomodelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,13 +162,13 @@ public class Administrador extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bttcerrarsesion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bttnuevasmarcas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bttnuevomodelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bttañadirusuari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(bttkardex, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bttañadirusuari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bttnuevasmarcas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -178,15 +178,15 @@ public class Administrador extends javax.swing.JFrame {
                 .addComponent(lblmenu)
                 .addGap(18, 18, 18)
                 .addComponent(bttkardex)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addGap(28, 28, 28)
+                .addGap(16, 16, 16)
+                .addComponent(bttnuevomodelo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bttnuevasmarcas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(bttañadirusuari)
                 .addGap(18, 18, 18)
-                .addComponent(bttnuevasmarcas)
-                .addGap(18, 18, 18)
-                .addComponent(bttnuevomodelo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bttcerrarsesion)
                 .addGap(14, 14, 14))
         );
@@ -217,7 +217,11 @@ public class Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_bttcerrarsesionActionPerformed
 
     private void bttnuevomodeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnuevomodeloActionPerformed
-        // TODO add your handling code here:
+        Agregar_Marca ag= new Agregar_Marca();
+        ag.setVisible(rootPaneCheckingEnabled);
+        this.dispose();
+        
+        
     }//GEN-LAST:event_bttnuevomodeloActionPerformed
 
     private void bttañadirusuariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttañadirusuariActionPerformed

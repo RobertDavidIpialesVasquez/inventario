@@ -119,14 +119,14 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="bttcerrarsesion" alignment="1" max="32767" attributes="0"/>
-                      <Component id="bttnuevasmarcas" alignment="0" max="32767" attributes="0"/>
                       <Component id="bttnuevomodelo" alignment="1" max="32767" attributes="0"/>
-                      <Component id="bttañadirusuari" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="bttkardex" min="-2" pref="420" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jButton1" max="32767" attributes="0"/>
+                      <Component id="bttañadirusuari" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bttnuevasmarcas" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -139,15 +139,15 @@
                   <Component id="lblmenu" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="bttkardex" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="bttnuevomodelo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="bttnuevasmarcas" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
                   <Component id="bttañadirusuari" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="bttnuevasmarcas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="bttnuevomodelo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="bttcerrarsesion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
@@ -220,7 +220,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="C:\Users\User\Pictures\categories_expand_icon_216184.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Agregar NUEVO marca"/>
+            <Property name="text" type="java.lang.String" value="Agregar NUEVa marca"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
